@@ -2,7 +2,7 @@ import urllib
 import urllib.request
 from pathlib import Path
 import tarfile
-from shutil import copyfile
+import shutil
 
 for i in range(1, 35):
 	url = f'http://spandh.dcs.shef.ac.uk/gridcorpus/s{str(i)}/audio/s{str(i)}_50kHz.tar'
@@ -18,6 +18,6 @@ for i in range(1, 35):
 		tar.extractall('/home/szb/datasets/grid_tmp')
 
 	#print('Move to dataset file')
-	#copyfile(f'./s{str(i)}/*', f'~/datasets/tmp2/s{str(i)}/audio/')
+	shutil.copytree(f'./s{str(i)}/', f'/home/szb/datasets/tmp2/s{str(i)}/audio/')
 	print(f'Done {str(i)} !')
 		
