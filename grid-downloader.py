@@ -20,8 +20,8 @@ for i in range(1, 35):
 	shutil.copytree(f'./s{str(i)}/', f'/home/szb/datasets/tmp2/s{str(i)}/audio/')
 	print(f'Audio {str(i)} Done !')
 
-	url_video1 = f'http://spandh.dcs.shef.ac.uk/gridcorpus/s{str(i)}/video/s{str(i)}.mpg6000.part1.tar'
-	url_video2 = f'http://spandh.dcs.shef.ac.uk/gridcorpus/s{str(i)}/video/s{str(i)}.mpg6000.part2.tar'
+	url_video1 = f'http://spandh.dcs.shef.ac.uk/gridcorpus/s{str(i)}/video/s{str(i)}.mpg_6000.part1.tar'
+	url_video2 = f'http://spandh.dcs.shef.ac.uk/gridcorpus/s{str(i)}/video/s{str(i)}.mpg_6000.part2.tar'
 
 	print(f'Downlaod audio {str(i)} : ' + url_audio)
 	urllib.request.urlretrieve(url_video1)
