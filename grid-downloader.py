@@ -6,13 +6,14 @@ import shutil
 
 for i in range(1, 21):
 
-	url_audio = f'http://spandh.dcs.shef.ac.uk/gridcorpus/s{str(i)}/audio/s{str(i)}_50kHz.tar'
-	#url = f'http://spandh.dcs.shef.ac.uk/gridcorpus/s{str(i)}/audio/s{str(i)}.tar'
+	#url_audio = f'http://spandh.dcs.shef.ac.uk/gridcorpus/s{str(i)}/audio/s{str(i)}_50kHz.tar'
+	url_audio = f'http://spandh.dcs.shef.ac.uk/gridcorpus/s{str(i)}/audio/s{str(i)}.tar'
 	print(f'Downlaod audio {str(i)} : ' + url_audio)
-	urllib.request.urlretrieve(url_audio)
+	urllib.request.urlretrieve(url_audio,filename='./')
 	
 	print('Start unzip audio {str(i)}')
-	with tarfile.open(f's{str(i)}_50kHz.tar', 'r') as tar_audio:
+	#with tarfile.open(f's{str(i)}_50kHz.tar', 'r') as tar_audio:
+	with tarfile.open(f's{str(i)}.tar', 'r') as tar_audio:
 		print (tar_audio.getmembers())
 		#input absolute path
 		tar_audio.extractall('/media/datas-2/steinsun/projects/grid-downloader/grid_audio_tmp/')
