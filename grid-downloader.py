@@ -9,7 +9,7 @@ for i in range(1, 21):
 	#url_audio = f'http://spandh.dcs.shef.ac.uk/gridcorpus/s{str(i)}/audio/s{str(i)}_50kHz.tar'
 	url_audio = f'http://spandh.dcs.shef.ac.uk/gridcorpus/s{str(i)}/audio/s{str(i)}.tar'
 	print(f'Downlaod audio {str(i)} : ' + url_audio)
-	urllib.request.urlretrieve(url_audio,filename='./')
+	urllib.request.urlretrieve(url_audio, filename=f's{str(i)}.tar')
 	
 	print('Start unzip audio {str(i)}')
 	#with tarfile.open(f's{str(i)}_50kHz.tar', 'r') as tar_audio:
