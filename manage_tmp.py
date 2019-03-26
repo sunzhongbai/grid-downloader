@@ -5,6 +5,7 @@ import tarfile
 import shutil
 
 for i in range(18, 21):
+	Path('~/datasets/grid_bp/video/').cd()
 	print(f'Start unzip video {str(i)}')
 	with tarfile.open(f's{str(i)}.mpg_6000.part1.tar', 'r') as tar_video1:
 		print (tar_video1.getmembers())
