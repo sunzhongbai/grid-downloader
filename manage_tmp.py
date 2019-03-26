@@ -5,7 +5,7 @@ import tarfile
 import shutil
 import os
 
-for i in range(22, 30):
+for i in range(30, 34):
 	os.chdir('/media/datas-2/steinsun/datasets/grid_bp/video')
 	print(f'Start unzip video {str(i)}')
 	with tarfile.open(f's{str(i)}.mpg_6000.part1.tar', 'r') as tar_video1:
