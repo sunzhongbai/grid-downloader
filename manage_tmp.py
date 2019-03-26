@@ -4,9 +4,9 @@ from pathlib import Path
 import tarfile
 import shutil
 
-for i in range(1, 21):
-  print(f'Start unzip video {str(i)}')
-  with tarfile.open(f's{str(i)}.mpg_6000.part1.tar', 'r') as tar_video1:
+for i in range(18, 21):
+	print(f'Start unzip video {str(i)}')
+	with tarfile.open(f's{str(i)}.mpg_6000.part1.tar', 'r') as tar_video1:
 		print (tar_video1.getmembers())
 		#input absolute path
 		tar_video1.extractall('/media/datas-2/steinsun/datasets/grid/grid_video_tmp/')
