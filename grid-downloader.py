@@ -29,7 +29,7 @@ for i in range(1, 21):
 	urllib.request.urlretrieve(url_video1, filename = f's{str(i)}.mpg_6000.part1.tar')
 	#http://spandh.dcs.shef.ac.uk/gridcorpus/s1/video/s1.mpg_vcd.zip
 	urllib.request.urlretrieve(url_video2, filename = f's{str(i)}.mpg_6000.part2.tar')
-	print('Start unzip video {str(i)}')
+	print(f'Start unzip video {str(i)}')
 	with tarfile.open(f's{str(i)}.mpg_6000.part1.tar', 'r') as tar_video1:
 		print (tar_video1.getmembers())
 		#input absolute path
