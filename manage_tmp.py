@@ -3,9 +3,10 @@ import urllib.request
 from pathlib import Path
 import tarfile
 import shutil
+import os
 
 for i in range(18, 21):
-	Path('~/datasets/grid_bp/video/').cd()
+	os.chdir('~/datasets/grid_bp/video/')
 	print(f'Start unzip video {str(i)}')
 	with tarfile.open(f's{str(i)}.mpg_6000.part1.tar', 'r') as tar_video1:
 		print (tar_video1.getmembers())
